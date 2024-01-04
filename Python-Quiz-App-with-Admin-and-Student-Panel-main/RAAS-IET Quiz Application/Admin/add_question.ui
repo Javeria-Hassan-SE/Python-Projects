@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddQeustionWindow</class>
+ <widget class="QMainWindow" name="AddQeustionWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1052</width>
+    <height>568</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame#login_form{
+background-color: rgb(48, 78, 151);
+border-radius:40px;
+margin: 60px;
+}
+QFrame#border_frame
+{
+background-color:#6fa844 ;
+}
+QFrame#main_frame{
+background-image: url(:/icons/Background2.jpg);
+
+background-position:center;
+background-repeat:no-repeat;
+}
+QComboBox#search_filter_comboBox::down-arrow
+{
+color :green;
+}
+QPushButton::ToolTip
+{
+background-color: white;
+color:black;
+background-image:none;
+}
+QTabWidget{background: gray;}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="border_frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <property name="leftMargin">
+        <number>40</number>
+       </property>
+       <property name="topMargin">
+        <number>40</number>
+       </property>
+       <property name="rightMargin">
+        <number>40</number>
+       </property>
+       <property name="bottomMargin">
+        <number>40</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QFrame" name="main_frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QFrame" name="header_frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <layout class="QGridLayout" name="header_gridLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item row="0" column="0" rowspan="2">
+                <widget class="QLabel" name="hunar_logo">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>100</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>70</width>
+                   <height>100</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">
+background-image: url(:/icons/icons/backgrounds/Asset 7-100.jpg);
+background-repeat: no-repeat; 
+ background-position: right;
+margin:5px;
+</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="ET_label">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>541</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(48, 78, 151);
+font: 25 22pt &quot;Bahnschrift Light&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>INSTITUTE OF EMERGING TECHNOLOGIES</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="RAAS_label">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>120</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(48, 78, 151);
+font: 63 32pt &quot;Bahnschrift SemiBold&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>RAAS</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="main_body">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QGroupBox" name="groupBox">
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <item row="0" column="0">
+                 <layout class="QGridLayout" name="gridLayout">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="Name_Label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Question</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1" colspan="5">
+                   <widget class="QTextEdit" name="question_text_edit">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>300</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(74, 74, 74);
+font: 12pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Type Question here...</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="6" colspan="3">
+                   <widget class="QLabel" name="q_img_path_label">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>300</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 8pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Choose Question Image (if Any)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="9">
+                   <widget class="QPushButton" name="q_img_btn">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(12, 164, 84);
+background-image: url(:/Icons/icons/white/folder.svg);
+font: 12pt&quot;Bahnschrift Light&quot;;
+border-color: rgb(5, 74, 162);
+color: rgb(255, 255, 255);
+background-position: left;
+background-repeat: no-repeat;</string>
+                    </property>
+                    <property name="text">
+                     <string>Browse Question Image</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="opt1_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 1</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1" colspan="5">
+                   <widget class="QLineEdit" name="option1_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(74, 74, 74);
+font: 12pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="6" colspan="3">
+                   <widget class="QLabel" name="opt1img_path_label">
+                    <property name="styleSheet">
+                     <string notr="true">font: 8pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Choose  Image for Option 1 (if Any)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="9">
+                   <widget class="QPushButton" name="opt1_img_btn">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(12, 164, 84);
+background-image: url(:/Icons/icons/white/folder.svg);
+font: 12pt&quot;Bahnschrift Light&quot;;
+border-color: rgb(5, 74, 162);
+color: rgb(255, 255, 255);
+background-position: left;
+background-repeat: no-repeat;</string>
+                    </property>
+                    <property name="text">
+                     <string>Browse Option 1 Image</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0">
+                   <widget class="QLabel" name="opt2_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 2</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="1" colspan="5">
+                   <widget class="QLineEdit" name="option2_line_edit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(74, 74, 74);
+font: 12pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="6" colspan="3">
+                   <widget class="QLabel" name="opt2_img_path_label">
+                    <property name="styleSheet">
+                     <string notr="true">font: 8pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Choose  Image for Option 2 (if Any)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="9">
+                   <widget class="QPushButton" name="opt2_img_btn">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(12, 164, 84);
+background-image: url(:/Icons/icons/white/folder.svg);
+font: 12pt&quot;Bahnschrift Light&quot;;
+border-color: rgb(5, 74, 162);
+color: rgb(255, 255, 255);
+background-position: left;
+background-repeat: no-repeat;</string>
+                    </property>
+                    <property name="text">
+                     <string>Browse Option 2 Image</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0">
+                   <widget class="QLabel" name="opt3_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 3</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="1" colspan="5">
+                   <widget class="QLineEdit" name="option3_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(74, 74, 74);
+font: 12pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="6" colspan="3">
+                   <widget class="QLabel" name="opt3_img_path_label">
+                    <property name="styleSheet">
+                     <string notr="true">font: 8pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Choose  Image for Option 3 (if Any)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="9">
+                   <widget class="QPushButton" name="opt3_img_btn">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(12, 164, 84);
+background-image: url(:/Icons/icons/white/folder.svg);
+font: 12pt&quot;Bahnschrift Light&quot;;
+border-color: rgb(5, 74, 162);
+color: rgb(255, 255, 255);
+background-position: left;
+background-repeat: no-repeat;</string>
+                    </property>
+                    <property name="text">
+                     <string>Browse Option 3 Image</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QLabel" name="opt4_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 4</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1" colspan="5">
+                   <widget class="QLineEdit" name="option4_lineEdit">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>24</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(74, 74, 74);
+font: 12pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="6" colspan="3">
+                   <widget class="QLabel" name="opt4_img_path_label">
+                    <property name="styleSheet">
+                     <string notr="true">font: 8pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Choose  Image for Option 4 (if Any)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="9">
+                   <widget class="QPushButton" name="opt4_img_btn">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(12, 164, 84);
+background-image: url(:/Icons/icons/white/folder.svg);
+font: 12pt&quot;Bahnschrift Light&quot;;
+border-color: rgb(5, 74, 162);
+color: rgb(255, 255, 255);
+background-position: left;
+background-repeat: no-repeat;</string>
+                    </property>
+                    <property name="text">
+                     <string>BrowseOption 4 Image</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="0" colspan="2">
+                   <widget class="QLabel" name="right_ans_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Choose Right Answer</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="2">
+                   <widget class="QRadioButton" name="opt1_radioButton">
+                    <property name="styleSheet">
+                     <string notr="true">font: 11pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 1</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="3">
+                   <widget class="QRadioButton" name="opt2_radioButton">
+                    <property name="styleSheet">
+                     <string notr="true">font: 11pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 2</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="4">
+                   <widget class="QRadioButton" name="opt3_radioButton">
+                    <property name="styleSheet">
+                     <string notr="true">font: 11pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 3</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="5">
+                   <widget class="QRadioButton" name="opt4_radioButton">
+                    <property name="styleSheet">
+                     <string notr="true">font: 11pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Option 4</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="6" colspan="3">
+                   <widget class="QLabel" name="right_ans_img_path_label">
+                    <property name="styleSheet">
+                     <string notr="true">font: 8pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>Choose  Image for right answer (if Any)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="5" column="9">
+                   <widget class="QPushButton" name="right_ans_img_btn">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(12, 164, 84);
+background-image: url(:/Icons/icons/white/folder.svg);
+font: 12pt&quot;Bahnschrift Light&quot;;
+border-color: rgb(5, 74, 162);
+color: rgb(255, 255, 255);
+background-position: left;
+background-repeat: no-repeat;</string>
+                    </property>
+                    <property name="text">
+                     <string>Browse Right Answer Image</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0">
+                   <widget class="QLabel" name="marks_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Marks</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="1" colspan="5">
+                   <widget class="QSpinBox" name="q_marks_spinBox">
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(74, 74, 74);
+font: 12pt&quot;Bahnschrift Light&quot;;</string>
+                    </property>
+                    <property name="minimum">
+                     <number>1</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="6">
+                   <widget class="QLabel" name="q_section_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Section</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="7" colspan="3">
+                   <widget class="QComboBox" name="q_section_combo_box">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>800</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="currentText">
+                     <string/>
+                    </property>
+                    <property name="insertPolicy">
+                     <enum>QComboBox::InsertAtBottom</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0">
+                   <widget class="QLabel" name="status_label">
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Status</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="1" colspan="4">
+                   <widget class="QComboBox" name="q_status_combo_box">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift Light</family>
+                      <pointsize>12</pointsize>
+                      <weight>50</weight>
+                      <italic>false</italic>
+                      <bold>false</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+background-color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="currentText">
+                     <string>Active</string>
+                    </property>
+                    <property name="insertPolicy">
+                     <enum>QComboBox::InsertAtBottom</enum>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Active</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>De-active</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="7" column="5" colspan="3">
+                   <widget class="QPushButton" name="add_question_btn">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>200</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(5, 74, 162);
+
+font: 12pt&quot;Bahnschrift Light&quot;;
+border-color: rgb(5, 74, 162);
+color: rgb(255, 255, 255);
+background-position: left;
+background-repeat: no-repeat;</string>
+                    </property>
+                    <property name="text">
+                     <string>Add Question</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="8" colspan="2">
+                   <widget class="QLabel" name="dis_error_msg">
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt&quot;Bahnschrift Light&quot;;
+color: rgb(255, 0, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>Please fill all required fields</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
